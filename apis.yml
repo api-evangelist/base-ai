@@ -1,8 +1,26 @@
 aid: base-ai
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/base-ai.png
 name: Base Ai
-description: Base Ai is a company surfaced as a portfolio company of wing-venture-capital and added to
-  the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Base is an AI Engagement OS for customer-led growth (CLG). The platform unifies advocacy,
+  references, referrals, reviews, community, customer success, lifecycle engagement, and revenue
+  attribution for B2B post-sale teams. Built for customer marketing, customer success, and RevOps
+  teams, Base uses 100+ AI agents to automate onboarding, adoption, upsell/expansion, retention, and
+  advocacy across the entire post-sale customer lifecycle, and to turn customer signals and feedback
+  into references, testimonials, and expansion plays. Base integrates with Salesforce, HubSpot,
+  Gainsight, Slack, and Zendesk, and is backed by Wing Venture Capital. Base does not currently
+  publish a public developer API, SDKs, or API reference.
 url: https://raw.githubusercontent.com/api-evangelist/base-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,9 +30,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Artificial Intelligence
+- Customer-Led Growth
+- Customer Success
+- Customer Marketing
+- Advocacy
+- RevOps
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,4 +48,27 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://base.ai/
+  url: https://www.base.ai/
+- type: Blog
+  url: https://www.base.ai/blog
+- type: Support
+  url: https://www.base.ai/contact-us
+- type: Login
+  url: https://go.base.ai/login/company
+- type: TermsOfService
+  url: https://www.base.ai/terms-conditions
+- type: PrivacyPolicy
+  url: https://www.base.ai/privacy-policy
+- type: Compliance
+  url: https://www.base.ai/platform/security-and-privacy
+- type: TrustCenter
+  url: security/base-ai-trust-center.yml
+- type: DomainSecurity
+  url: security/base-ai-domain-security.yml
+- type: LLMsTxt
+  url: llms/base-ai-llms.txt
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

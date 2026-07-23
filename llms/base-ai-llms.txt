@@ -1,0 +1,67 @@
+<!-- generated: '2026-07-18' | method: searched | source: https://www.base.ai/llms.txt -->
+# Base AI
+
+> Base is the AI Engagement OS for customer-led growth. One platform unifies advocacy, references, referrals, reviews, community, customer success, lifecycle engagement, and revenue attribution for B2B post-sale teams. Built for customer marketing, customer success, and RevOps teams who want every customer relationship to drive adoption, expansion, and revenue.
+
+## Platform
+
+- [Platform overview](https://www.base.ai/platform): The AI engagement OS for the entire post-sale lifecycle — onboarding, success, advocacy, references, expansion, and more.
+- [Base AI engine](https://www.base.ai/platform/baseai): The AI layer that turns customer data into engagement, advocacy, and expansion.
+- [Control Center](https://www.base.ai/platform/control-center): The cockpit for customer-led growth programs and signals.
+- [CMA Programs](https://www.base.ai/platform/the-cma-programs): Cross-channel customer journeys — in-app, email, web, messaging.
+- [Team Dashboards](https://www.base.ai/platform/team-dashboard): Embed Base inside the CRM for self-serve sales and CS workflows.
+- [Integrations](https://www.base.ai/platform/integrations): Salesforce, HubSpot, Gainsight, Slack, Zendesk, and more.
+- [Security & privacy](https://www.base.ai/platform/security-and-privacy): SOC 2, GDPR, encryption end-to-end.
+
+## Solutions
+
+- [Customer onboarding](https://www.base.ai/solutions/onboarding): AI-guided onboarding that accelerates time-to-value.
+- [Customer references](https://www.base.ai/solutions/references): AI matches the right customer to every active deal.
+- [Customer referrals](https://www.base.ai/solutions/referrals): Automated referral programs with pipeline attribution.
+- [Customer advocacy](https://www.base.ai/solutions/advocacy): Build, scale, and prove ROI on advocacy programs.
+- [Upsell & expansion](https://www.base.ai/solutions/expansion): Turn engagement signals into expansion plays.
+- [Customer retention](https://www.base.ai/solutions/retention): AI success plans, QBRs, and renewal motions.
+- [Reviews & social proof](https://www.base.ai/solutions/reviews): Automated review generation triggered by engagement signals.
+- [Capture customer stories at scale](https://www.base.ai/solutions/customer-stories): AI captures customer proof directly from call recordings.
+- [Voice of customer](https://www.base.ai/solutions/harness-the-power-of-voice-of-customer): Sentiment, signals, and stories from customer feedback.
+- [Merge community & advocacy](https://www.base.ai/solutions/merge-community-and-advocacy): Personalize advocacy outreach inside community.
+
+## Customer stories
+
+- [All customer stories](https://www.base.ai/base-customers): Real outcomes from B2B teams driving customer-led growth with Base.
+- [Deel](https://www.base.ai/customers/deel): How Deel grew from zero to ~800 advocates and ~100 monthly reference meetings in 9 months.
+
+## Education & content
+
+- [Customer-led growth blog](https://www.base.ai/blog): Strategy, playbooks, and AI insights for post-sale teams.
+- [Customer marketing glossary](https://www.base.ai/customer-marketing-glossary): A–Z guide to 60+ customer marketing and CLG terms.
+- [What is customer-led growth?](https://www.base.ai/what-is-customer-led-growth-clg): CLG framework, KPIs, and a practical playbook.
+- [A guide to customer marketing](https://www.base.ai/a-guide-to-customer-marketing): Strategies, team building, metrics, and best practices for B2B SaaS.
+- [CLG Campus](https://www.base.ai/clg-campus): Courses, peer networking, templates, and toolkits.
+- [Events & webinars](https://www.base.ai/events-webinars-listing): Live and on-demand webinars on CLG, advocacy, and expansion.
+- [Newsroom](https://www.base.ai/newsroom): Press coverage and product announcements.
+- [TOP 100 CLG 2026](https://www.base.ai/top100-clg-2026): The leaders and practitioners driving customer-led growth in 2026.
+
+## Comparisons
+
+- [Base vs Influitive](https://www.base.ai/base-vs-influitive): AI-powered customer-led growth platform vs. a standalone advocacy hub.
+- [Base vs UserEvidence](https://www.base.ai/base-vs-userevidence): Customer-led growth operating system vs. a customer evidence platform.
+- [Base vs Peerbound](https://www.base.ai/base-vs-peerbound): Customer-led growth platform vs. customer proof AI.
+
+## Company
+
+- [About Base](https://www.base.ai/about): Mission, team, and the AI Engagement OS thesis.
+- [Careers](https://www.base.ai/careers): Open positions across engineering, product, and GTM.
+- [FanBase advocacy program](https://www.base.ai/fan-base): Base's own customer advocacy program.
+- [Book a demo](https://www.base.ai/book-a-demo): Personalized 30-minute demo of the platform.
+- [Contact](https://www.base.ai/contact-us): Sales, support, and partnerships.
+
+## Legal & trust
+
+- [Privacy policy](https://www.base.ai/privacy-policy)
+- [Terms & conditions](https://www.base.ai/terms-conditions)
+- [Cookie policy](https://www.base.ai/cookie-policy)
+- [CCPA compliance](https://www.base.ai/ccpa)
+- [Sub-processors](https://www.base.ai/sub-processors)
+- [Copyright policy](https://www.base.ai/copyright-policy)
+- [Legal hub](https://www.base.ai/legal)
