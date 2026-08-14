@@ -19,8 +19,11 @@ description: >-
   teams, Base uses 100+ AI agents to automate onboarding, adoption, upsell/expansion, retention, and
   advocacy across the entire post-sale customer lifecycle, and to turn customer signals and feedback
   into references, testimonials, and expansion plays. Base integrates with Salesforce, HubSpot,
-  Gainsight, Slack, and Zendesk, and is backed by Wing Venture Capital. Base does not currently
-  publish a public developer API, SDKs, or API reference.
+  Gainsight, Slack, Discord, Airtable, and Zendesk, and is backed by Wing Venture Capital. Base
+  operates a token-authenticated REST API for its customers — tokens are generated inside the
+  application under Settings > Users & Team — but publishes no public API reference, developer
+  portal, OpenAPI definition, or SDKs, so the API surface is documented only by third-party
+  integration platforms.
 url: https://raw.githubusercontent.com/api-evangelist/base-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -30,7 +33,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-18'
+modified: '2026-08-13'
 tags:
 - Company
 - Artificial Intelligence
@@ -67,8 +70,41 @@ common:
   url: security/base-ai-domain-security.yml
 - type: LLMsTxt
   url: llms/base-ai-llms.txt
+- type: HelpCenter
+  url: https://support.base.ai/
+- type: StatusPage
+  url: https://status.base.ai
+- type: Lifecycle
+  url: lifecycle/base-ai-lifecycle.yml
+- type: ChangeLog
+  url: changelog/base-ai-changelog.yml
+- type: Authentication
+  url: authentication/base-ai-authentication.yml
+- type: Plans
+  url: plans/base-ai-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/base-ai-rate-limits.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-13'
+  status: minimal
+  artifacts_added: 6
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: >-
+    Base runs a real token-authenticated REST API — tokens are self-issued inside the logged-in app
+    at Settings > Users & Team > Generate token — but every description of it lives behind that
+    login; the public site has no developer portal, no API reference and no spec, and the app host
+    go.base.ai answers unauthenticated requests for /openapi.json, /graphql and /.well-known/* with
+    the same HTML SPA shell under HTTP 200.
+  evidence:
+  - url: https://www.base.ai/openapi.json
+    status: 404
+  - url: https://www.base.ai/api-docs
+    status: 404
+  - url: https://go.base.ai/openapi.json
+    status: 200
+  - url: https://www.unifyapps.com/docs/unify-integrations/base-ai
+    status: 200
+  checked: '2026-08-13'
