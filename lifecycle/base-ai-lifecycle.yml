@@ -1,0 +1,43 @@
+generated: '2026-08-13'
+method: searched
+source: https://status.base.ai/
+versioning:
+  scheme: product-release
+  current: 2.7.7
+  docs: https://support.base.ai/base-release-notes-v2.7.7
+  note: >-
+    Base versions the platform as a whole (2.7.4 → 2.7.7 between 2026-06-24 and 2026-07-28,
+    roughly a release every two weeks). There is no published API version scheme, because there
+    is no public API reference — see authentication/base-ai-authentication.yml.
+deprecation:
+  policy_url: null
+  sunset_header: unknown
+  note: >-
+    No deprecation or sunset policy is published on any public Base surface. Release notes
+    describe additions and improvements only; no removal or migration notices were found in the
+    2.7.4–2.7.7 window.
+sla:
+  url: null
+  uptime_target: null
+  note: No public SLA or uptime commitment found; uptime is observable only via the status page.
+status_page:
+  url: https://status.base.ai
+  provider: Atlassian Statuspage
+  machine_readable: https://status.base.ai/api/v2/status.json
+  history: https://status.base.ai/history
+  current_indicator: none
+  current_description: All Systems Operational
+  components:
+  - Advocate Portal
+  - Admin portal
+  - Backend
+  - AWS Infrastructure
+  incidents_open: 0
+  probed: '2026-08-13'
+deprecated_operations: []
+x-evidence:
+- {url: 'https://status.base.ai/', http_status: 200}
+- {url: 'https://status.base.ai/api/v2/status.json', http_status: 200, note: page id cmcrw1gdglbk, name Base}
+- {url: 'https://status.base.ai/api/v2/components.json', http_status: 200}
+- {url: 'https://status.base.ai/history', http_status: 200}
+- {url: 'https://support.base.ai/base-release-notes-v2.7.7', http_status: 200}

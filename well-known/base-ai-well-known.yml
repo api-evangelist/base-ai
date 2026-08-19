@@ -1,0 +1,83 @@
+generated: '2026-08-13'
+method: probed
+source: live GET probes of every Base host resolved from apis.yml + DNS enumeration
+result: no-hit
+note: >-
+  Base serves no /.well-known/ discovery document from any host it controls. The apex and www
+  hosts (Webflow) answer every /.well-known/* path with an 88-byte "Invalid .well-known request"
+  page under HTTP 404. The application host go.base.ai is a Vite single-page app whose edge
+  returns the SPA HTML shell under HTTP 200 for EVERY path probed (including /openapi.json,
+  /graphql and /.well-known/agent-card.json) — a soft-200 catch-all, not a document, and it is
+  recorded as a miss. The one 200 carrying a real document, status.base.ai/.well-known/security.txt,
+  is Atlassian's own security.txt served by the Statuspage vendor (Canonical
+  https://www.atlassian.com/.well-known/security.txt, Contact security@atlassian.com) on a CNAME'd
+  host; it is NOT Base's document and earns Base no SecurityTxt credit. No WellKnown or SecurityTxt
+  pointer is emitted from this probe.
+hosts:
+- host: https://www.base.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+  - {path: /.well-known/openapi.json, status: 404, note: advertised in robots.txt, not served}
+  - {path: /.well-known/skills.json, status: 404, note: advertised in robots.txt, not served}
+  - {path: /.well-known/ai-catalog.json, status: 404, note: advertised in robots.txt, not served}
+- host: https://base.ai
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://go.base.ai
+  note: >-
+    SPA catch-all. Every path returns HTTP 200 with the same text/html Vite app shell, so a 200
+    here is not evidence of a document. All entries below are recorded as misses.
+  documents:
+  - {path: /.well-known/security.txt, status: 200, hit: false, reason: html-spa-shell}
+  - {path: /.well-known/openid-configuration, status: 200, hit: false, reason: html-spa-shell}
+  - {path: /.well-known/oauth-authorization-server, status: 200, hit: false, reason: html-spa-shell}
+  - {path: /.well-known/api-catalog, status: 200, hit: false, reason: html-spa-shell}
+  - {path: /.well-known/ai-plugin.json, status: 200, hit: false, reason: html-spa-shell}
+  - {path: /.well-known/agent-card.json, status: 200, hit: false, reason: html-spa-shell}
+  - {path: /.well-known/agent.json, status: 200, hit: false, reason: html-spa-shell}
+- host: https://status.base.ai
+  note: Atlassian Statuspage vendor host (CNAME cmcrw1gdglbk.stspg-customer.com).
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    hit: false
+    reason: vendor-owned
+    detail: >-
+      PGP-signed Atlassian security.txt. Canonical https://www.atlassian.com/.well-known/security.txt;
+      Contact mailto:security@atlassian.com. Belongs to Atlassian, not Base.
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://support.base.ai
+  note: HubSpot-hosted help center (CNAME group20.sites.hscoscdn20.net).
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+hosts_not_resolving:
+- api.base.ai
+- app.base.ai
+- developer.base.ai
+- docs.base.ai
+- dev.base.ai
+- help.base.ai
+- mcp.base.ai

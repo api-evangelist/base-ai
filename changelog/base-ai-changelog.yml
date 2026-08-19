@@ -1,0 +1,59 @@
+generated: '2026-08-13'
+method: searched
+source: https://support.base.ai/base-release-notes-v2.7.7
+docs: https://support.base.ai/whats-new
+scheme: product-release
+current_version: 2.7.7
+cadence: roughly every two weeks (2.7.4 2026-06-24 → 2.7.7 2026-07-28)
+note: >-
+  Base publishes dated, narrative release notes as articles in its HubSpot-hosted help center.
+  There is no release-notes index page that renders without JavaScript and no feed; the four
+  entries below were discovered through https://support.base.ai/sitemap.xml, whose <lastmod>
+  values supply the dates. These are PRODUCT release notes — none of them documents an API
+  change, because Base publishes no public API reference.
+entries:
+- version: 2.7.7
+  date: '2026-07-28'
+  url: https://support.base.ai/base-release-notes-v2.7.7
+  breaking: false
+  counts: {features: 3, improvements: 2}
+  highlights:
+  - One advocate availability signal across marketing and sales, weighted by the cost of each ask
+  - Levels can require a mix of ask tags (AND across tag requirements) instead of a raw count
+  - 'Data Sync adds 3 objects: ask records, reference requests and email events'
+- version: 2.7.6
+  date: '2026-07-21'
+  url: https://support.base.ai/base-release-notes-v2.7.6
+  breaking: false
+  counts: {features: 5, improvements: 5}
+  highlights:
+  - View any advocate's live portal read-only as that advocate
+  - Re-add a declined advocate to the reference pool behind a confirmation step
+  - Discord integration rewards posts, replies, reactions and mentions
+  - Per-activity eligibility columns in referenceability search
+  - Data Sync adds References and Nominations as outbound objects
+- version: 2.7.5
+  date: '2026-07-13'
+  url: https://support.base.ai/base-release-notes-v2.7.5
+  breaking: false
+  counts: {features: 6, improvements: 5}
+  highlights:
+  - Advocates can dismiss asks (reversible, excluded from reporting)
+  - Survey responses become referenceable social-wall content
+  - Levels earned by ask tag, plus internal tags hidden from advocates
+  - CorporateGift added as a rewards provider
+  - Airtable data sync on a schedule with upsert semantics
+- version: 2.7.4
+  date: '2026-06-24'
+  url: https://support.base.ai/release-notes-2-7-4
+  breaking: false
+  highlights:
+  - Levels can qualify advocates on points earned within a date range rather than lifetime total
+  - Windowed and lifetime Levels can coexist in the same program without resetting point history
+x-evidence:
+- {url: 'https://support.base.ai/sitemap.xml', http_status: 200}
+- {url: 'https://support.base.ai/base-release-notes-v2.7.7', http_status: 200}
+- {url: 'https://support.base.ai/base-release-notes-v2.7.6', http_status: 200}
+- {url: 'https://support.base.ai/base-release-notes-v2.7.5', http_status: 200}
+- {url: 'https://support.base.ai/release-notes-2-7-4', http_status: 200}
+- {url: 'https://support.base.ai/whats-new', http_status: 200, note: renders an empty JS shell; no server-rendered index}

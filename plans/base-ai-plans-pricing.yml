@@ -1,0 +1,18 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.base.ai/sitemap.xml
+plan_count: 0
+currency: null
+note: >-
+  Base publishes no pricing or plans page. /pricing, /plans, /get-started and /demo all return
+  HTTP 404 on www.base.ai, and none of the 294 URLs in the site sitemap is a pricing, plans or
+  packaging page. Base sells through a "Book a demo" / contact-sales motion only — there is no
+  self-serve tier, no published list price, and no published quota, overage or per-tier limit.
+  This is an honest zero, not an omission.
+plans: []
+x-evidence:
+- {url: 'https://www.base.ai/pricing', http_status: 404}
+- {url: 'https://www.base.ai/plans', http_status: 404}
+- {url: 'https://www.base.ai/get-started', http_status: 404}
+- {url: 'https://www.base.ai/demo', http_status: 404}
+- {url: 'https://www.base.ai/sitemap.xml', http_status: 200, note: 294 URLs, none a pricing page}

@@ -1,0 +1,19 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.base.ai/llms.txt
+limit_count: 0
+note: >-
+  No rate limits are published on any public Base surface. There is no developer portal, no API
+  reference and no help-center article naming a quota, a window, a burst allowance or a 429
+  response, so there is nothing to record. Response headers could not be observed either: the
+  API requires an account-issued token and the app host answers unauthenticated requests with an
+  HTML shell, so no live RateLimit-*/X-RateLimit-*/Retry-After header was seen. Honest zero —
+  undocumented, not absent.
+headers: []
+limits: []
+exhaustion_status: null
+x-evidence:
+- {url: 'https://www.base.ai/llms.txt', http_status: 200, note: 40 documented links, none developer-facing}
+- {url: 'https://www.base.ai/api-docs', http_status: 404}
+- {url: 'https://support.base.ai/hs-search-results?term=API', http_status: 200, note: help-center search returns no API reference article}
+- {url: 'https://go.base.ai/api/project/version', http_status: 200, note: text/html SPA shell; no API response headers observable}

@@ -1,0 +1,96 @@
+generated: '2026-08-13'
+method: searched
+source: https://www.unifyapps.com/docs/unify-integrations/base-ai
+first_party_documentation: false
+first_party_docs_note: >-
+  Base publishes NO public API reference, developer portal or authentication page. api.base.ai,
+  developer.base.ai, docs.base.ai and app.base.ai do not resolve; www.base.ai returns 404 for
+  /openapi.json, /swagger.json, /api-docs, /docs and /graphql. The auth model below is recorded
+  from a third-party integration platform's connector documentation, which quotes Base's own
+  in-product token screen verbatim. It is real and citable, but it is not published by Base.
+summary:
+  types: [apiKey]
+  api_key_in: [unknown]
+  oauth2_flows: []
+  note: >-
+    Header/parameter placement of the token is not stated by any public source and was not
+    observable without an account, so api_key_in is recorded as unknown rather than guessed.
+schemes:
+- name: apiToken
+  type: apiKey
+  in: unknown
+  description: >-
+    Base account API token. Generated inside the logged-in Base application at
+    Settings → "Users & Team" → "Generate token", supplying a Name and a Comment. The token is
+    shown once and must be stored by the customer. Token issuance therefore requires an existing
+    Base account — the API is customer-only, not open to public sign-up.
+  issuance:
+    location: Base web application (https://go.base.ai)
+    path: Settings > Users & Team > Generate token
+    fields: [Name, Comment]
+    self_service: true
+    requires_account: true
+  sources: ['https://www.unifyapps.com/docs/unify-integrations/base-ai']
+base_url:
+  value: null
+  note: >-
+    No public source names an API host. The go.base.ai single-page app calls same-origin /api/*
+    routes (/api/authenticate, /api/authenticate/token, /api/authorization/privilege,
+    /api/integration, /api/project/version were read from its published JS bundle
+    /assets/index-B1hfJk0m.js), but the edge answers every unauthenticated GET on go.base.ai with
+    the SPA HTML shell under HTTP 200, so the API host could not be confirmed by probe. Recorded
+    as missing rather than guessed.
+x-api-surface:
+  status: partner-documented
+  note: >-
+    NOT a Base-published contract and NOT an OpenAPI. This is the capability surface a third-party
+    iPaaS vendor exposes for its Base AI connector, which is evidence that a real token-authenticated
+    API exists and roughly what it covers. No request/response schemas, paths, methods or parameter
+    names are published anywhere public, so none are recorded here.
+  source: https://www.unifyapps.com/docs/unify-integrations/base-ai
+  source_last_updated: '2026-08-04'
+  action_count: 26
+  trigger_count: 4
+  domains: [users, advocates, accounts, opportunities, contacts, custom-attributes, reference-requests, points]
+  actions:
+  - Create a user
+  - Delete a user by email
+  - Delete user by ID
+  - List users
+  - List accounts
+  - List advocates
+  - List opportunities
+  - Upsert opportunity
+  - Update account custom attribute
+  - Update advocate custom attributes
+  - Create advocate custom object attributes
+  - Update advocate custom object attributes
+  - Delete advocate custom object attributes
+  - List custom attributes
+  - List custom object attributes
+  - Import contacts by contact ID
+  - Import contacts by email
+  - Grant points to advocate by API
+  - Trigger user's activity
+  - Notify when advocate completes an ASK
+  - Read reference request form settings
+  - Read submitted reference requests
+  - Read submitted reference requests by UUID
+  - Read the reference advocates
+  - Submit a reference request in managed or p2p mode
+  triggers:
+  - New advocate
+  - New or updated account
+  - New or updated opportunity
+  - New user
+  triggers_note: >-
+    These are the integration vendor's trigger names. Nothing public states whether Base delivers
+    them as webhooks or whether the vendor polls, so no Webhooks pointer is emitted.
+x-evidence:
+- {url: 'https://www.unifyapps.com/docs/unify-integrations/base-ai', http_status: 200}
+- {url: 'https://www.base.ai/openapi.json', http_status: 404}
+- {url: 'https://www.base.ai/swagger.json', http_status: 404}
+- {url: 'https://www.base.ai/api-docs', http_status: 404}
+- {url: 'https://www.base.ai/graphql', http_status: 404}
+- {url: 'https://go.base.ai/openapi.json', http_status: 200, note: text/html SPA shell, not a spec}
+- {url: 'https://go.base.ai/assets/index-B1hfJk0m.js', http_status: 200, note: app bundle naming same-origin /api/* routes}
