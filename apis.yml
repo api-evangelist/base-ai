@@ -36,6 +36,9 @@ description: >-
   portal, OpenAPI definition, or SDKs, so the API surface is documented only by third-party
   integration platforms.
 url: https://raw.githubusercontent.com/api-evangelist/base-ai/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
+x-api-posture-note: "Base operates a token-authenticated REST API for its customers — tokens are generated inside the application under Settings > Users & Team — but publishes no public API reference, developer portal, Op"
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
